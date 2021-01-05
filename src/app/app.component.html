@@ -1,0 +1,113 @@
+<p>XYZ Company Employee Signup Form</p>
+<mat-horizontal-stepper>
+  <mat-step label="Fill out your name">
+    <form>
+      <div class="form-group">
+        <label for="exampleInputFirstname1">First Name :</label>
+        <input
+          type="text"
+          class="form-control"
+          id="exampleInputEmail1"
+          name="FirstName"
+          [(ngModel)]="FirstName"
+          placeholder="Enter your FirstName"
+        />
+        <p>{{ FirstName }}</p>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputLastname1">Last Name :</label>
+        <input
+          type="text"
+          class="form-control"
+          id="exampleInputEmail1"
+          name="LastName"
+          [(ngModel)]="LastName"
+          placeholder="Enter your LastName"
+        />
+        <p>{{ LastName }}</p>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address :</label>
+        <input
+          type="email"
+          class="form-control"
+          id="exampleInputEmail1"
+          name="Email"
+          [(ngModel)]="Email"
+          placeholder="Enter EmailId"
+        />
+        <small id="emailHelp" class="form-text text-muted"
+          >We'll never share your email with anyone else.</small
+        >
+        <p>{{ Email }}</p>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password :</label>
+        <input
+          type="password"
+          class="form-control"
+          id="exampleInputPassword1"
+          placeholder="Password"
+        />
+        <small id="passwordHelp" class="form-text text-muted"
+          >Include Uppercase letters and Special Characters</small
+        >
+      </div>
+      <hr />
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+        <label class="form-check-label" for="exampleCheck1"
+          >Accept Terms and Conditions</label
+        >
+      </div>
+    </form>
+    <hr />
+    <button mat-button matStepperNext>Next</button>
+  </mat-step>
+
+  <mat-step label="Fill out your address">
+    <form>
+      <div class="form-group">
+        <label for="exampleInputAddress1">Permanent Address :</label>
+        <input
+          type="text"
+          class="form-control"
+          id="exampleInputAddress1"
+          name="Address"
+          [(ngModel)]="Address"
+          placeholder="Enter your Permanent Address"
+        />
+      </div>
+      <div class="form-group">
+        <label for="exampleInputAddress2">Resedential Address :</label>
+        <input
+          type="text"
+          class="form-control"
+          id="exampleInputAddress2"
+          name="Address"
+          [(ngModel)]="Address"
+          placeholder="Enter your Resedential Address"
+        />
+      </div>
+      <div class="form-group">
+        <label for="exampleInputAddress3">Office Address :</label>
+        <input
+          type="text"
+          class="form-control"
+          id="exampleInputAddress3"
+          placeholder="Enter your Office Address"
+        />
+      </div>
+    </form>
+    <hr />
+    <button mat-button matStepperPrevious>Back</button>
+    <button mat-button matStepperNext>Next</button>
+  </mat-step>
+
+  <mat-step label="Finish">
+    <p>Hurray you have Completed! Now Click Finish</p>
+    <hr />
+    <button mat-button matStepperPrevious>Back</button>
+    <button mat-button matStepperFinish>Finish</button>
+  </mat-step>
+</mat-horizontal-stepper>
